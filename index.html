@@ -18,13 +18,33 @@
 
 <body background="background.webp">
     <center>
-        <h1 class="header">AI Ping Pong Game<button id='instructions' data-toggle="modal" data-target="#my_modal">Instructions</button></h1>
-        <span>
+        <h1 class="header">AI Ping Pong Game<button id='instructions' data-toggle="modal"
+                data-target="#my_modal">Instructions</button></h1>
+        
             <button id="play_button" onclick="play_game()">Start Game</button>
-            <h3 id="status"></h3>
-        </span>
+            <h3 id="status">dfghsrtyudsgh</h3>
+        
         <div id="canvas"></div>
+        <button id="restart" onclick="restart()">Restart Game</button>
         <div class="footer">Developed By: Devansh Pathak || Credit: Ping Pong Game</div>
+
+        <div id="my_modal" class="modal fade">
+            <div class="modal-dialog" style="width:90%">
+                <div class="modal-content">
+                    <div class="modal-header m_header">
+                        <button data-dismiss="modal" id="close_button">&times;</button>
+                        Instructions
+                    </div>
+                    <div class="modal-body body">
+                        1. Keep your laptop screen straight.<br>
+                        2. Move yourself approximately 3-4 feet away from the laptop.<br>
+                        3. Move your right wrist in ascending & decending manner, a red dot should appear on your screen.<br>
+                        4. Now press the play button, and again move yourself approximately 3-4 feet away from the laptop.<br>
+                        5. The red paddel is your paddel that will move as per the movement of your right wrist.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
     </center>
     <script src="main.js"></script>
 </body>

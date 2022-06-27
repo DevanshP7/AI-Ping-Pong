@@ -2,6 +2,13 @@
 
 body{
     background-size: cover;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .header{
@@ -63,13 +70,11 @@ body{
     font-family: 'Updock', cursive;
     font-size: 40px;
     transition: transform 1s, color 1s, background-color 1s;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-left: -240px;
+    margin-top: 70px;
 }
 
 #play_button:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     color: blue;
     background-color: aliceblue;
 }
@@ -79,20 +84,74 @@ body{
     color: aliceblue;
     border: none;
     border-radius: 10px;
-    font-family: serif;
-    font-size: 30px;
-    font-weight: 100;
+    font-family: 'Updock', cursive;
+    font-size: 40px;
     transition: color 1s, background-color 1s;
     height: fit-content;
     width: fit-content;
-    padding: 10px;
-    float: left;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-left: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 #status:hover {
     color: crimson;
     background-color: aliceblue;
+}
+
+#restart {
+    background-color: aliceblue;
+    color: blue;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Updock', cursive;
+    font-size: 40px;
+    transition: transform 1s, color 1s, background-color 1s;
+    margin-top: 2px;
+    margin-bottom: 55px;
+}
+
+#restart:hover {
+    transform: scale(1.2);
+    color: aliceblue;
+    background-color: blue;
+}
+
+.instruction_image{
+    width:45%;
+    display:inline-block;
+}
+
+.m_header{
+    color: blue;
+    font-family: 'tangerine', cursive;
+    font-size: 50px;
+    transition: color 1s;
+}
+
+#close_button{
+    float:right;
+    border: none;
+    color: grey;
+    font-family: cursive;
+    background-color: rgba(53, 53, 125, 0);
+    transition: color 0.5s;
+}
+
+#close_button:hover{
+    color: black;
+}
+
+.body{
+    font-family: 'tangerine', cursive;
+    color: blue;
+    font-size: 50px;
+    transition: color 1s;
+}
+
+.body:hover{
+    color:rgb(198, 5, 43);
+}
+
+.m_header:hover{
+    color:rgb(198, 5, 43);
 }
