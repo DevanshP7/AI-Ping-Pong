@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Updock&family=Waterfall&display=swap');
+
+body{
+    background-size: cover;
+}
+
+.header{
+    position: fixed;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: linear-gradient(to right, rgb(178, 178, 255), rgb(59, 108, 254), blue, rgb(59, 108, 254), rgb(178, 178, 255));
+    width: 100%;
+    margin-top: 0;
+    color: aliceblue;
+    height: 60px;
+    padding-left: 200px;
+    padding-top: 10px;
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+}
+
+#instructions{
+    float: right;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    margin-right: 60px;
+    font-size: 40px;
+    color: blue;
+    margin-top: 80px;
+    transition: color 1s, background-color 1s, transform 1s;
+}
+
+#instructions:hover{
+    background-color: rgba(218, 15, 56, 0);
+    color: aliceblue;
+    transform: scale(1.5);
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    color:aliceblue;
+    background-color: green;
+    width: 100%;
+    font-family: cursive;
+    font-size: 30px;
+    transition: color 1s, background-color 1s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.footer:hover{
+    color: green;
+    background-color: aliceblue;
+}
+
+#play_button {
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Updock', cursive;
+    font-size: 40px;
+    transition: transform 1s, color 1s, background-color 1s;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: -240px;
+}
+
+#play_button:hover {
+    transform: scale(1.5);
+    color: blue;
+    background-color: aliceblue;
+}
+
+#status {
+    background-color: rgb(198, 5, 43);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: 100;
+    transition: color 1s, background-color 1s;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    float: left;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+#status:hover {
+    color: crimson;
+    background-color: aliceblue;
+}
