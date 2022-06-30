@@ -155,3 +155,22 @@ body::-webkit-scrollbar{
 .m_header:hover{
     color:rgb(198, 5, 43);
 }
+
+canvas{
+
+    background-color: aliceblue;
+    border-radius:30px;
+    animation-name: glow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes glow{
+
+    0%{box-shadow: 0px 0px 30px rgb(255, 255, 255);}
+    33%{box-shadow: 0px 0px 30px red}
+    66%{box-shadow: 0px 0px 30px yellow}
+    100%{box-shadow: 0px 0px 30px rgb(255, 255, 255);}
+
+}
