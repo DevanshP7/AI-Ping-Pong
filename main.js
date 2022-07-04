@@ -1,5 +1,25 @@
 
-/*created by prashant shukla */
+/*
+function draw() {
+  background("#D3D3D3");
+  if(noseX > 300 && marioX > 0){
+    marioX--;
+  }
+  if(noseX < 300 && marioX < 610){
+    marioX++;
+  }
+  if(noseY > 150 && marioY < 330){
+    marioY++;
+  }
+  if(noseY < 150 && marioY > 0){
+    marioY--;
+  }
+  image(img,marioX, marioY, 40,70);
+} 
+*/ 
+wristX = 0;
+wristY = 0;
+wrist_score = 0;
 
 var paddle2 =10,paddle1=10;
 
@@ -30,16 +50,31 @@ function setup(){
   video.hide();
 
   posenet = ml5.poseNet(video, modelloaded);
+  posenet.on('pose', gotresults);
 }
 
 function modelloaded(){
   console.log('Model Loaded!');
 }
 
+function gotresults(results){
+  if(results.length > 0){
+    wristX = results[0].pose.rightWrist.x;
+    wristY = results[0].pose.rightWrist.y;
+    wrist_score = results[0].pose.rightWrist.confidence;
+  }
+}
+
 
 function draw(){
+  
  image(video,0,0,700,600);
-
+if(wrist_score > 0.2){
+    console.log(wristX);
+    fill('blue');
+    stroke('white');
+    circle(wristX,wristY,20);
+  }
 
  fill("black");
  stroke("black");
