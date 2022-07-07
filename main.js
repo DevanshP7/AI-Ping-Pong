@@ -1,22 +1,5 @@
+gameStatus = '';
 
-/*
-function draw() {
-  background("#D3D3D3");
-  if(noseX > 300 && marioX > 0){
-    marioX--;
-  }
-  if(noseX < 300 && marioX < 610){
-    marioX++;
-  }
-  if(noseY > 150 && marioY < 330){
-    marioY++;
-  }
-  if(noseY < 150 && marioY > 0){
-    marioY--;
-  }
-  image(img,marioX, marioY, 40,70);
-} 
-*/ 
 wristX = 0;
 wristY = 0;
 wrist_score = 0;
@@ -65,10 +48,18 @@ function gotresults(results){
   }
 }
 
+function play_game(){
+  gameStatus = 'Start';
+  document.getElementById('status').innerHTML = 'Game Is Loaded!!!!!!!!'
+}
 
 function draw(){
+   image(video,0,0,700,600);
+  if(gameStatus == 'Start'){
+
   
- image(video,0,0,700,600);
+  
+
 if(wrist_score > 0.2){
     console.log(wristX);
     fill('blue');
@@ -111,6 +102,7 @@ if(wrist_score > 0.2){
    
    //function move call which in very important
     move();
+}
 }
 
 
